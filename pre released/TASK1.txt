@@ -1,0 +1,111 @@
+Peter Opt1
+***2.1***
+TOY:
+|Attributes        | Functions|
+|-|-|
+|toy|constructor()|
+|Name              | getname( )/setname( )|
+|ID                    | getID( )/setID( )|
+|Price               | getPrice( )/setPrice( )|
+|Minimum age  | getMinimumage( )/setMinimumage( )|
+
+ComputerGame:
+Attributes        | Functions
+|-|-|
+|computer game|constructor()|
+Category         | getcategory( )/setcategory( )
+Console          | getconsole( )/setconsole( )
+
+Vehicle
+Attributes        | Functions
+|-|-|
+|vehicle|constructor()|
+Type                | gettype( )/settype( )
+Height             | getheight( )/setheight( )
+Length             | getlength( )/setlength( )
+Weight             | getweight( )/setweight( )
+
+***2.2***
+inheritence means that all atributes are copied to the subclasses
+
+***2.3***
+    class toy:
+        def __init__(self,n,i,p,m):
+            self.name=n
+            self.id=0
+            self.price=0.00
+            self.minimumage=0
+        
+        def getname(self):
+            return self.name
+            
+        def setname(self,name):
+            self.name=name
+            
+        def getid(self):
+            return self.id
+        
+        def setid(self,id):
+            self.id=id
+        
+        def getprice(self):
+            return self.price
+            
+        def setprice(self):
+            self.price=price
+        
+        def getminimumage(self):
+            return self.minimumage
+       
+       def setminimumage(self,min):
+            self.minimumage=mim
+        
+***2.4***
+    class vehicle(toy):
+        def__init__(self,n,i,p,m,a,b,c,d):
+            toy.__init__(self,n,i,p,m)
+            self.type=a
+            self.height=b
+            self.weight=c
+            self.length=d
+
+            
+***2.5***
+        if age>0 and age<18:
+            self.age=age
+        else:
+            age=input('please input again')
+
+***2.6***
+    vehicle=[ ]
+    computergame=[ ]
+    vehicle.append('Red Sports Car','RSC13',15.00,6,'car',3.3,12.1,0.08)
+
+
+***2.7***
+    def printdetails(id):
+       i=0
+       while toy[i].id!=id:
+            i+=1
+       Toy[i].printdetails()
+
+***2.8***
+    def discount(n):
+        n=n/100
+        for i in range(len(toy)):
+            toy[i].price=toy[i].price*n
+
+***2.9***
+ a bubble sort compares the neighbor's values and change their position if their values don't fulfill the requirement.
+ a insertion sort always try to find a appropriate place of insertion.
+ 
+***2.10***
+    def sort():
+        for i in range(len(toys)):
+            itemtobeinserted=toy[i]
+            m=i-1
+            while itemtobeinserted.price<toy[m].price and m>0:
+                toy[m+1]=toy[m]
+                m-=1
+            toy[m+1]=itemtobeinserted
+
