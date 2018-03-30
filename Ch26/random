@@ -1,0 +1,69 @@
+
+#OP1 Peter
+
+
+import pickle
+
+
+class Car(object):
+    def __init__(self, name, year, owner):
+        self.name = name;
+        self.year = year;
+        self.owner = owner;
+
+    def __repr__(self):
+        return "(%s,%s,%s)" % (self.name, self.year, self.owner);
+
+
+Set = [Car('', 0, '') for i in range(10)];
+Set[8] = Car('AudiQ5', 2018, 'Z');
+Set[6] = Car('AudiQ3', 2006, 'R');
+Set[7] = Car('AudiQ7', 2007, 'Z');
+Set[1] = Car('AudiQ4', 2011, 'R');
+
+
+def add(n, y, o):
+    i = 0;
+    Index = y % 10
+    X = 1
+    for i in range(10):
+        X = X * Set[i].year
+    while Set[Index].year != 0 and X == 0:
+        Index += 1
+        if Index == 10:
+            Index = 0
+    if X != 0:
+        print("There is no space for the NewItem")
+    Set[Index] = Car(n, y, o)
+    load()
+
+
+def save():
+    f = open('CarData.dat', 'ab');
+    f.close();
+    file = open('CarData.dat', 'rb+');
+    for i in range(10):
+        pickle.dump(Set[i], file);
+    file.close();
+
+
+def Find(SearchItem):
+    Index = SearchItem % 10
+    N = 0
+    while Set[Index].year != SearchItem and Set[Index].year != 0 and N != 11:
+        N += 1
+        Index = Index + 1
+        if Index == 10:
+            Index = 0
+    if Set[Index].year == 0:
+        print("The Item is not in the list")
+    if Set[Index].year == SearchItem:
+        print(Set[Index].name, Set[Index].year, Set[Index].owner)
+
+
+def load():
+    file = open('CarData.dat', 'rb');
+    Set1 = [];
+    for i in range(10):
+        Set1.append(pickle.load(file));
+    print(Set1)

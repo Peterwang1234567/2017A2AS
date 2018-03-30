@@ -1,0 +1,36 @@
+*** opt1 Peter
+Task 3.1
+character(Peter).
+anImal(ZACK).
+skill(EAT).
+character_type(Peter,ZACK).
+
+pet(ZACK,Peter).
+
+has_skill(Peter,EAT).
+
+Task 3.2
+onlyapet(X,Y) = character(X), pet(X,Y), NOT(pet(X,Z)), animal(Y)
+
+
+Task 3.3
+character(marshal).
+
+animal(dog).
+skill(drink).
+pet(marshal,dog).
+character_type(marchal,physicist).
+has_skill(marshal,drink).
+
+Task 3.4
+True
+princess
+jim
+invisibility
+jim
+
+Task 3.5
+pet(jim,X).
+has_skill(X,fly).
+skill(X).
+character_type(X,princess),pet(X,Y).
