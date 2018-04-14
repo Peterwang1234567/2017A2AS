@@ -1,0 +1,22 @@
+Peter
+END OF CHAPTER QUESTIONS
+1a.
+1.cityln(London, uk)
+2.Visitedd(Strasbourg)>
+
+ b.chile, argentina
+
+ c. countriesIVisited(Country) IF cityIn(City, Country) AND iVisited(City).
+
+2a.
+1.minimumAge (car, 18).
+
+2.allowedToDrive(X, V) IF hasLicence (X) AND minimumAge (V, L) AND age (X, A) AND A>=L.
+
+ b.1. Who = jack
+   2.False
+   3.False
+ c.1.qualifiedCarDrivers(X) IF qualifiedDriver(X, car).
+   2.partQualified(X) IF passedTheoryTest(X) AND NOT passedDrivingTest(X, _).
+  
+ d.Clause 11 (true), clause 01 (instantiates L as 18), clause 05 (instantiates A as 17), clause 15 ( A < L so it is false) result is false	

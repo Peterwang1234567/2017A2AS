@@ -1,0 +1,37 @@
+Peter
+class LibraryItem:
+    def __init__(self, t, a, i): 
+      self.__Title = t
+      self.__Author_Artist = a
+      self.__ItemID = i
+      self.__OnLoan = False
+      self.__DueDate = datetime.date.today()
+      self.__BorrowerID = 0
+      
+    def BorrowerName(self):
+      return(self.__BorrowerName)
+    
+    def EmailAddress(self):
+      return (self.__EmailAddress)
+    
+    def BorrowerID(self):
+      return (self.__BorrowerID)
+    
+    def ItemsOnLoan(self):
+      return(self.__ItemsOnLoan)
+    
+    def AddNewBorrower(self, n) :
+      self.__ItemsOnLoan += n
+      
+    def Borrowing(self, b):
+      self.__OnLoan = True
+      self.__DueDate = self.__DueDate + datetime.timedelta(weeks=3)
+      self.__BorrowerID = b
+      
+    def Print(self):
+       print('BorrowerName:',self.__BorrowerName)
+       print('EmailAddress:',self.__EmailAddress)
+       print('BorrrowerID:',self.__BorrowerID)
+       print('ItemOnLoan:',self.__ItemsOnLoan)
+       if self.OnLoan = True:
+           print('DueDate:',self.__DueDate)Testing
